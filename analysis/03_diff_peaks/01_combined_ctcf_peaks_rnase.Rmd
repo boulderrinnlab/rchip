@@ -476,6 +476,8 @@ ggplot(chip_wash_rnase_data, aes(x = l2fc_chip_vs_input, y = l2fc_wash_rnase_vs_
   xlim(-3,3) +
   ylim(-3,3)
 
+ggsave("figures/CTCF_all_reps_wash_RNase.pdf")
+
 ```
 
 # alternative method
@@ -501,6 +503,8 @@ ggplot(chip_wash_rnase_data, aes(x = l2fc_chip_vs_input, y = l2fc_wash_rnase_vs_
   geom_abline(slope = wash_slope, intercept = wash_intercept, color = "blue", size = 1.5) +
   annotate(geom = "text", x = -2, y = 1, label = paste0("y = ", round(rnase_intercept,3), " + ", round(rnase_slope,2),"x"), color = "green") +
   annotate(geom = "text", x = -2, y = 2, label = paste0("y = ", round(wash_intercept,3), " + ", round(wash_slope,2),"x"), color = "blue")
+
+ggsave("figures/cleaner_all_ctcf replicates.pdf")
 ```
 
 
